@@ -26,6 +26,6 @@ class Addproduct(models.Model):
    product_brand = ForeignKey(RegisterBrand, on_delete=models.CASCADE)
    product_Bprice = models.DecimalField(max_digits=10, decimal_places=2)
    product_Sprice = models.DecimalField(max_digits=10, decimal_places=2)
-   product_image = models.ImageField()
+   product_image = models.ImageField(upload_to='product_images/',null=True, blank=True)
 
    

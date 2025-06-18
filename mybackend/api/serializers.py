@@ -19,6 +19,8 @@ class RegisterBrandSerializer(serializers.ModelSerializer):
         model = RegisterBrand
         fields = '__all__'
 class AddProductSerializer(serializers.ModelSerializer):  
+     product_category = serializers.CharField(source="product_category.category_name", read_only=True)
+     product_brand = serializers.CharField(source="product_brand.brand_name", read_only=True)
      class Meta:
         model = Addproduct
         fields = '__all__'
